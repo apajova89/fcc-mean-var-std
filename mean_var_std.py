@@ -1,11 +1,12 @@
 import numpy as np
 
 def calculate(list):
-  # Checking to see if list isn't 9 long
+  # Checking to see if list is 9 items or not
   if len(list) != 9:
     raise ValueError("List must contain nine numbers.")
-  # creating array
+  # creating array by reshaping list to 3x3 NumPy array
   array = np.array(list).reshape((3, 3))
+  # creating Dictionary that will be returned with the descriptive statistics
   calculations = {
     "mean": [
       np.mean(array, axis = 0).tolist(),
